@@ -4,7 +4,9 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
-    Title="Easy">
+    xmlns:viewmodels="clr-namespace:PocketSafe.ViewModels"
+    Title="{Binding Title}}"
+    x:DataType="viewmodels:EasyViewModel">
 
     <Page.Behaviors>
         <mct:StatusBarBehavior StatusBarColor="{AppThemeBinding Light={StaticResource LatteCrust}, Dark={StaticResource MacchiatoCrust}}" StatusBarStyle="{AppThemeBinding Dark=LightContent, Light=DarkContent}" />

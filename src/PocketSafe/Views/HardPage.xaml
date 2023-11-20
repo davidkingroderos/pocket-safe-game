@@ -4,7 +4,9 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
-    Title="Hard">
+    xmlns:viewmodels="clr-namespace:PocketSafe.ViewModels"
+    Title="{Binding Title}"
+    x:DataType="viewmodels:HardViewModel">
 
     <Grid
         Padding="20"

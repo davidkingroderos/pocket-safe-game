@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PocketSafe.ViewModels
+namespace PocketSafe.Models
 {
-    public partial class MediumViewModel : BaseViewModel
+    public class ColorIdentifier
     {
-        public MediumViewModel()
+        public static string GetOppositeColor(Color color)
         {
-            Title = "Medium";
+            return null;
         }
     }
 }

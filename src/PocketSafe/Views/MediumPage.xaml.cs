@@ -1,9 +1,13 @@
+using PocketSafe.ViewModels;
+
 namespace PocketSafe.Views;
 
 public partial class MediumPage : ContentPage
 {
-	public MediumPage()
+	public MediumPage(MediumViewModel viewModel)
 	{
 		InitializeComponent();
+
+		BindingContext = viewModel;
 	}
 }

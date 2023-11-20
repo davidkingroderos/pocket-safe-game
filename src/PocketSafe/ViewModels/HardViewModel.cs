@@ -8,5 +8,9 @@ namespace PocketSafe.ViewModels
 {
     public partial class HardViewModel : BaseViewModel
     {
+        public HardViewModel()
+        {
+            Title = "Hard";
+        }
     }
 }
