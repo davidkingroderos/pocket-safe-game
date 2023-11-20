@@ -3,5 +3,24 @@
     x:Class="PocketSafe.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:PocketSafe"
-    Shell.FlyoutBehavior="Disabled" />
+    xmlns:views="clr-namespace:PocketSafe.Views"
+    Shell.FlyoutBehavior="{OnIdiom Desktop=Locked,
+                                   Phone=Disabled}"
+    Shell.NavBarIsVisible="False">
+
+    <TabBar>
+        <ShellContent
+            Title="Easy"
+            ContentTemplate="{DataTemplate views:EasyPage}"
+            Route="EasyPage" />
+        <ShellContent
+            Title="Medium"
+            ContentTemplate="{DataTemplate views:MediumPage}"
+            Route="MediumPage" />
+        <ShellContent
+            Title="Hard"
+            ContentTemplate="{DataTemplate views:HardPage}"
+            Route="HardPage" />
+    </TabBar>
+
+</Shell>

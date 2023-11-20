@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using CommunityToolkit.Maui;
+using PocketSafe.ViewModels;
+using PocketSafe.Views;
 
 namespace PocketSafe;
 
@@ -20,6 +22,12 @@ public static class MauiProgram
 #if DEBUG
         builder.Logging.AddDebug();
 #endif
+
+        builder.Services.AddSingleton<EasyViewModel>();
+        builder.Services.AddSingleton<HardViewModel>();
+
+        builder.Services.AddSingleton<EasyPage>();
+        builder.Services.AddSingleton<HardPage>();
 
         return builder.Build();
     }

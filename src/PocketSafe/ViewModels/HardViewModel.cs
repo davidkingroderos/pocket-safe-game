@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PocketSafe.ViewModels
 {
-    internal class HardViewModel
+    public partial class HardViewModel : BaseViewModel
     {
     }
 }
