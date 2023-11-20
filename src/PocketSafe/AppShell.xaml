@@ -12,14 +12,20 @@
         <ShellContent
             Title="Easy"
             ContentTemplate="{DataTemplate views:EasyPage}"
+            Icon="{AppThemeBinding Light=easy_light.svg,
+                                   Dark=easy_dark.svg}"
             Route="EasyPage" />
         <ShellContent
             Title="Medium"
             ContentTemplate="{DataTemplate views:MediumPage}"
+            Icon="{AppThemeBinding Light=medium_light.svg,
+                                   Dark=medium_dark.svg}"
             Route="MediumPage" />
         <ShellContent
             Title="Hard"
             ContentTemplate="{DataTemplate views:HardPage}"
+            Icon="{AppThemeBinding Light=hard_light.svg,
+                                   Dark=hard_dark.svg}"
             Route="HardPage" />
     </TabBar>
 
