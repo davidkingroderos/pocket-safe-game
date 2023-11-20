@@ -1,12 +1,75 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PocketSafe.Views.MediumPage"
-             Title="MediumPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+<ContentPage
+    x:Class="PocketSafe.Views.MediumPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
+    Title="Medium">
+
+    <Page.Behaviors>
+        <mct:StatusBarBehavior StatusBarColor="{AppThemeBinding Light={StaticResource LatteCrust}, Dark={StaticResource MacchiatoCrust}}" StatusBarStyle="{AppThemeBinding Dark=LightContent, Light=DarkContent}" />
+    </Page.Behaviors>
+
+    <Grid
+        Padding="20"
+        ColumnDefinitions="*,*"
+        RowDefinitions="*,*,*,*">
+        <Button
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="10"
+            BackgroundColor="{AppThemeBinding Light={StaticResource LatteGreen},
+                                              Dark={StaticResource MacchiatoGreen}}"
+            CornerRadius="20" />
+        <Button
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="10"
+            BackgroundColor="{AppThemeBinding Light={StaticResource LatteGreen},
+                                              Dark={StaticResource MacchiatoGreen}}"
+            CornerRadius="20" />
+        <Button
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="10"
+            BackgroundColor="{AppThemeBinding Light={StaticResource LatteGreen},
+                                              Dark={StaticResource MacchiatoGreen}}"
+            CornerRadius="20" />
+        <Button
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="10"
+            BackgroundColor="{AppThemeBinding Light={StaticResource LatteGreen},
+                                              Dark={StaticResource MacchiatoGreen}}"
+            CornerRadius="20" />
+        <Button
+            Grid.Row="2"
+            Grid.Column="0"
+            Margin="10"
+            BackgroundColor="{AppThemeBinding Light={StaticResource LatteGreen},
+                                              Dark={StaticResource MacchiatoGreen}}"
+            CornerRadius="20" />
+        <Button
+            Grid.Row="2"
+            Grid.Column="1"
+            Margin="10"
+            BackgroundColor="{AppThemeBinding Light={StaticResource LatteGreen},
+                                              Dark={StaticResource MacchiatoGreen}}"
+            CornerRadius="20" />
+        <Button
+            Grid.Row="3"
+            Grid.Column="0"
+            Margin="10"
+            BackgroundColor="{AppThemeBinding Light={StaticResource LatteGreen},
+                                              Dark={StaticResource MacchiatoGreen}}"
+            CornerRadius="20" />
+        <Button
+            Grid.Row="3"
+            Grid.Column="1"
+            Margin="10"
+            BackgroundColor="{AppThemeBinding Light={StaticResource LatteGreen},
+                                              Dark={StaticResource MacchiatoGreen}}"
+            CornerRadius="20" />
+    </Grid>
+
 </ContentPage>

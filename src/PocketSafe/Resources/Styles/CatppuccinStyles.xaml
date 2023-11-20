@@ -11,14 +11,7 @@
     </Style>
 
     <Style ApplyToDerivedTypes="True" TargetType="ContentPage">
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LatteBase}, Dark={StaticResource MacchiatoBase}}" />
-    </Style>
-
-    <Style ApplyToDerivedTypes="True" TargetType="Button">
-        <Setter Property="CornerRadius" Value="25" />
-        <Setter Property="HeightRequest" Value="50" />
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LatteText}, Dark={StaticResource MacchiatoText}}" />
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LatteSurface1}, Dark={StaticResource MacchiatoSurface1}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LatteMantle}, Dark={StaticResource MacchiatoCrust}}" />
     </Style>
 
     <Style ApplyToDerivedTypes="True" TargetType="Entry">

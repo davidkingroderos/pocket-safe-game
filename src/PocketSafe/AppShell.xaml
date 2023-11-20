@@ -6,7 +6,7 @@
     xmlns:views="clr-namespace:PocketSafe.Views"
     Shell.FlyoutBehavior="{OnIdiom Desktop=Locked,
                                    Phone=Disabled}"
-    Shell.NavBarIsVisible="False">
+    Shell.NavBarIsVisible="True">
 
     <TabBar>
         <ShellContent
