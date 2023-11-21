@@ -13,12 +13,21 @@ namespace PocketSafe.ViewModels
         private bool hasStarted = false;
         private int[] buttonNumbers;
         private int prevNumber = 0;
+        private readonly int safeSize = 4;
+
+        private bool HasWon
+        {
+            get
+            {
+                if (!R0C0_IsClickable && !R0C1_IsClickable && !R1C0_IsClickable && !R1C1_IsClickable)
+                    return true;
+                else return false;
+            }
+        }
 
         public EasyViewModel()
         {
             Title = "Easy";
-
-            Application.Current.RequestedThemeChanged += (s, a) => GetButtonColors();
 
             InitializeButtons();
         }
@@ -44,63 +53,148 @@ namespace PocketSafe.ViewModels
         [RelayCommand]
         private void R0C0_Click()
         {
-            R0C0_IsClickable = false;
+            if (IsBusy)
+            {
+                return;
+            }
+
+            IsBusy = true;
 
             if (!hasStarted)
             {
                 hasStarted = true;
             }
+            else if (prevNumber != (buttonNumbers[0] - 1) && !(prevNumber == safeSize && buttonNumbers[0] == 1))
+            //else if (prevNumber != (buttonNumbers[0] - 1) && prevNumber != safeSize && buttonNumbers[0] != 1)
+            {
+                ResetButtons();
+            }
+
+            R0C0_IsClickable = false;
+
+            if (HasWon)
+            {
+                Shell.Current.CurrentPage.DisplayAlert("Unlocked!", "You've unlocked the safe!", "Restart");
+
+                ResetButtons();
+                InitializeButtons();
+            }
 
             prevNumber = buttonNumbers[0];
+
+            IsBusy = false;
         }
 
         [RelayCommand]
         private void R0C1_Click()
         {
-            R0C1_IsClickable = false;
+            if (IsBusy)
+            {
+                return;
+            }
+
+            IsBusy = true;
 
             if (!hasStarted)
             {
                 hasStarted = true;
             }
+            else if (prevNumber != (buttonNumbers[1] - 1) && !(prevNumber == safeSize && buttonNumbers[1] == 1))
+            //else if (prevNumber != (buttonNumbers[1] - 1) && prevNumber != safeSize && buttonNumbers[1] != 1)
+            {
+                ResetButtons();
+            }
 
-            prevNumber = buttonNumbers[0];
+            R0C1_IsClickable = false;
+
+            if (HasWon)
+            {
+                Shell.Current.CurrentPage.DisplayAlert("Unlocked!", "You've unlocked the safe!", "Restart");
+
+                ResetButtons();
+                InitializeButtons();
+            }
+
+            prevNumber = buttonNumbers[1];
+
+            IsBusy = false;
         }
 
         [RelayCommand]
         private void R1C0_Click()
         {
-            R1C0_IsClickable = false;
+            if (IsBusy)
+            {
+                return;
+            }
+
+            IsBusy = true;
 
             if (!hasStarted)
             {
                 hasStarted = true;
             }
+            else if (prevNumber != (buttonNumbers[2] - 1) && !(prevNumber == safeSize && buttonNumbers[2] == 1))
+            //else if (prevNumber != (buttonNumbers[2] - 1) && prevNumber != safeSize && buttonNumbers[2] != 1)
+            {
+                ResetButtons();
+            }
 
-            prevNumber = buttonNumbers[0];
+            R1C0_IsClickable = false;
+
+            if (HasWon)
+            {
+                Shell.Current.CurrentPage.DisplayAlert("Unlocked!", "You've unlocked the safe!", "Restart");
+
+                ResetButtons();
+                InitializeButtons();
+            }
+
+            prevNumber = buttonNumbers[2];
+
+            IsBusy = false;
         }
 
         [RelayCommand]
         private void R1C1_Click()
         {
-            R1C1_IsClickable = false;
+            if (IsBusy)
+            {
+                return;
+            }
 
+            IsBusy = true;
             if (!hasStarted)
             {
                 hasStarted = true;
             }
+            else if (prevNumber != (buttonNumbers[3] - 1) && !(prevNumber == safeSize && buttonNumbers[3] == 1))
+            //else if (prevNumber != (buttonNumbers[3] - 1) && prevNumber != safeSize && buttonNumbers[3] != 1)
+            {
+                ResetButtons();
+            }
 
-            prevNumber = buttonNumbers[0];
-        }
+            R1C1_IsClickable = false;
 
-        private void GetButtonColors()
-        {
+            if (HasWon)
+            {
+                Shell.Current.CurrentPage.DisplayAlert("Unlocked!", "You've unlocked the safe!", "Restart");
 
+                ResetButtons();
+                InitializeButtons();
+            }
+
+            prevNumber = buttonNumbers[3];
+
+            IsBusy = false;
         }
 
         private void ResetButtons()
         {
-
+            R0C0_IsClickable = true;
+            R0C1_IsClickable = true;
+            R1C0_IsClickable = true;
+            R1C1_IsClickable = true;
         }
 
         private void InitializeButtons()
@@ -120,6 +214,7 @@ namespace PocketSafe.ViewModels
                 }
             }
 
+            hasStarted = false;
             buttonNumbers = generatedNumbers.ToArray();
         }
     }
