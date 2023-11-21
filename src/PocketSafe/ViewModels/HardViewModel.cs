@@ -13,11 +13,6 @@ namespace PocketSafe.ViewModels
             Title = "Hard";
         }
 
-        protected override void InitializeButtons()
-        {
-            throw new NotImplementedException();
-        }
-
         protected override void ResetButtons()
         {
             throw new NotImplementedException();

@@ -25,6 +25,8 @@ namespace PocketSafe.ViewModels
         {
             Title = "Easy";
             safeSize = 4;
+
+            InitializeButtons();
         }
 
         [ObservableProperty]
@@ -36,16 +38,19 @@ namespace PocketSafe.ViewModels
         [ObservableProperty]
         private bool r1C1_IsClickable = true;
 
+        protected override void ResetButtons()
+        {
+            R0C0_IsClickable = true;
+            R0C1_IsClickable = true;
+            R1C0_IsClickable = true;
+            R1C1_IsClickable = true;
+        }
+
+        #region Commands
+
         [RelayCommand]
         private void R0C0_Click()
         {
-            if (IsBusy)
-            {
-                return;
-            }
-
-            IsBusy = true;
-
             if (!hasStarted)
             {
                 hasStarted = true;
@@ -66,20 +71,11 @@ namespace PocketSafe.ViewModels
             }
 
             prevNumber = buttonNumbers[0];
-
-            IsBusy = false;
         }
 
         [RelayCommand]
         private void R0C1_Click()
         {
-            if (IsBusy)
-            {
-                return;
-            }
-
-            IsBusy = true;
-
             if (!hasStarted)
             {
                 hasStarted = true;
@@ -100,20 +96,11 @@ namespace PocketSafe.ViewModels
             }
 
             prevNumber = buttonNumbers[1];
-
-            IsBusy = false;
         }
 
         [RelayCommand]
         private void R1C0_Click()
         {
-            if (IsBusy)
-            {
-                return;
-            }
-
-            IsBusy = true;
-
             if (!hasStarted)
             {
                 hasStarted = true;
@@ -134,19 +121,11 @@ namespace PocketSafe.ViewModels
             }
 
             prevNumber = buttonNumbers[2];
-
-            IsBusy = false;
         }
 
         [RelayCommand]
         private void R1C1_Click()
         {
-            if (IsBusy)
-            {
-                return;
-            }
-
-            IsBusy = true;
             if (!hasStarted)
             {
                 hasStarted = true;
@@ -167,37 +146,8 @@ namespace PocketSafe.ViewModels
             }
 
             prevNumber = buttonNumbers[3];
-
-            IsBusy = false;
         }
 
-        protected override void ResetButtons()
-        {
-            R0C0_IsClickable = true;
-            R0C1_IsClickable = true;
-            R1C0_IsClickable = true;
-            R1C1_IsClickable = true;
-        }
-
-        protected override void InitializeButtons()
-        {
-            HashSet<int> generatedNumbers = new();
-            Random random = new();
-
-            int safeSize = 4;
-
-            while (generatedNumbers.Count < safeSize)
-            {
-                int randomNumber = random.Next(1, safeSize + 1);
-
-                if (!generatedNumbers.Contains(randomNumber))
-                {
-                    generatedNumbers.Add(randomNumber);
-                }
-            }
-
-            hasStarted = false;
-            buttonNumbers = generatedNumbers.ToArray();
-        }
+        #endregion
     }
 }

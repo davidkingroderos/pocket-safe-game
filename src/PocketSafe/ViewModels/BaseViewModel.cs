@@ -11,23 +11,37 @@ namespace PocketSafe.ViewModels
     {
         protected bool hasStarted;
         protected int[] buttonNumbers;
-        protected int prevNumber = 0; 
+        protected int prevNumber;
         protected int safeSize;
 
         public BaseViewModel()
         {
             hasStarted = false;
-
-            InitializeButtons();
+            prevNumber = 0;
         }
 
         [ObservableProperty]
         public string title;
 
-        [ObservableProperty]
-        public bool isBusy;
+        protected void InitializeButtons()
+        {
+            HashSet<int> generatedNumbers = new();
+            Random random = new();
+
+            while (generatedNumbers.Count < safeSize)
+            {
+                int randomNumber = random.Next(1, safeSize + 1);
+
+                if (!generatedNumbers.Contains(randomNumber))
+                {
+                    generatedNumbers.Add(randomNumber);
+                }
+            }
+
+            hasStarted = false;
+            buttonNumbers = generatedNumbers.ToArray();
+        }
 
         protected abstract void ResetButtons();
-        protected abstract void InitializeButtons();
     }
 }

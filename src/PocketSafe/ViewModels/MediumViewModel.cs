@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,12 @@ namespace PocketSafe.ViewModels
 {
     public partial class MediumViewModel : BaseViewModel
     {
-        public MediumViewModel() : base()
+        public MediumViewModel()
         {
             Title = "Medium";
             safeSize = 8;
+
+            InitializeButtons();
         }
 
         [ObservableProperty]
@@ -34,12 +37,66 @@ namespace PocketSafe.ViewModels
 
         protected override void ResetButtons()
         {
-            throw new NotImplementedException();
+            R0C0_IsClickable = true;
+            R0C1_IsClickable = true;
+            R1C0_IsClickable = true;
+            R1C1_IsClickable = true;
+            R2C0_IsClickable = true;
+            R2C1_IsClickable = true;
+            R3C0_IsClickable = true;
+            R3C1_IsClickable = true;
         }
 
-        protected override void InitializeButtons()
+        #region Commands
+
+        [RelayCommand]
+        private void R0C0_Click()
         {
-            throw new NotImplementedException();
+
         }
+
+        [RelayCommand]
+        private void R0C1_Click()
+        {
+
+        }
+
+        [RelayCommand]
+        private void R1C0_Click()
+        {
+
+        }
+
+        [RelayCommand]
+        private void R1C1_Click()
+        {
+
+        }
+
+        [RelayCommand]
+        private void R2C0_Click()
+        {
+
+        }
+
+        [RelayCommand]
+        private void R2C1_Click()
+        {
+
+        }
+
+        [RelayCommand]
+        private void R3C0_Click()
+        {
+
+        }
+
+        [RelayCommand]
+        private void R3C1_Click()
+        {
+
+        }
+
+        #endregion
     }
 }
