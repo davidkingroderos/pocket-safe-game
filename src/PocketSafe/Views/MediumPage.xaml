@@ -20,42 +20,58 @@
             Grid.Row="0"
             Grid.Column="0"
             Margin="10"
-            CornerRadius="20" />
+            Command="{Binding R0C0_ClickCommand}"
+            CornerRadius="20"
+            IsEnabled="{Binding R0C0_IsClickable}" />
         <Button
             Grid.Row="0"
             Grid.Column="1"
             Margin="10"
-            CornerRadius="20" />
+            Command="{Binding R0C1_ClickCommand}"
+            CornerRadius="20"
+            IsEnabled="{Binding R0C1_IsClickable}" />
         <Button
             Grid.Row="1"
             Grid.Column="0"
             Margin="10"
-            CornerRadius="20" />
+            Command="{Binding R1C0_ClickCommand}"
+            CornerRadius="20"
+            IsEnabled="{Binding R1C0_IsClickable}" />
         <Button
             Grid.Row="1"
             Grid.Column="1"
             Margin="10"
-            CornerRadius="20" />
+            Command="{Binding R1C1_ClickCommand}"
+            CornerRadius="20"
+            IsEnabled="{Binding R1C1_IsClickable}" />
         <Button
             Grid.Row="2"
             Grid.Column="0"
             Margin="10"
-            CornerRadius="20" />
+            Command="{Binding R2C0_ClickCommand}"
+            CornerRadius="20"
+            IsEnabled="{Binding R2C0_IsClickable}" />
         <Button
             Grid.Row="2"
             Grid.Column="1"
             Margin="10"
-            CornerRadius="20" />
+            Command="{Binding R2C1_ClickCommand}"
+            CornerRadius="20"
+            IsEnabled="{Binding R2C1_IsClickable}" />
         <Button
             Grid.Row="3"
             Grid.Column="0"
             Margin="10"
-            CornerRadius="20" />
+            Command="{Binding R3C0_ClickCommand}"
+            CornerRadius="20"
+            IsEnabled="{Binding R3C0_IsClickable}" />
         <Button
             Grid.Row="3"
             Grid.Column="1"
             Margin="10"
-            CornerRadius="20" />
+            Command="{Binding R3C1_ClickCommand}"
+            CornerRadius="20"
+            IsEnabled="{Binding R3C1_IsClickable}" />
     </Grid>
 
 </ContentPage>
