@@ -10,10 +10,11 @@ namespace PocketSafe.ViewModels
 {
     public partial class MediumViewModel : BaseViewModel
     {
+        protected override bool HasWon => throw new NotImplementedException();
         public MediumViewModel()
         {
             Title = "Medium";
-            safeSize = 8;
+            SafeSize = 8;
 
             InitializeButtons();
         }
@@ -34,6 +35,7 @@ namespace PocketSafe.ViewModels
         private bool r3C0_IsClickable = true;
         [ObservableProperty]
         private bool r3C1_IsClickable = true;
+
 
         protected override void ResetButtons()
         {

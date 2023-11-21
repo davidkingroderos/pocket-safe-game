@@ -10,8 +10,7 @@ namespace PocketSafe.ViewModels
 {
     public partial class EasyViewModel : BaseViewModel
     {
-
-        private bool HasWon
+        protected override bool HasWon
         {
             get
             {
@@ -24,7 +23,7 @@ namespace PocketSafe.ViewModels
         public EasyViewModel() : base()
         {
             Title = "Easy";
-            safeSize = 4;
+            SafeSize = 4;
 
             InitializeButtons();
         }
@@ -51,11 +50,11 @@ namespace PocketSafe.ViewModels
         [RelayCommand]
         private void R0C0_Click()
         {
-            if (!hasStarted)
+            if (!HasStarted)
             {
-                hasStarted = true;
+                HasStarted = true;
             }
-            else if (prevNumber != (buttonNumbers[0] - 1) && !(prevNumber == safeSize && buttonNumbers[0] == 1))
+            else if (PrevNumber != (ButtonNumbers[0] - 1) && !(PrevNumber == SafeSize && ButtonNumbers[0] == 1))
             {
                 ResetButtons();
             }
@@ -70,17 +69,17 @@ namespace PocketSafe.ViewModels
                 InitializeButtons();
             }
 
-            prevNumber = buttonNumbers[0];
+            PrevNumber = ButtonNumbers[0];
         }
 
         [RelayCommand]
         private void R0C1_Click()
         {
-            if (!hasStarted)
+            if (!HasStarted)
             {
-                hasStarted = true;
+                HasStarted = true;
             }
-            else if (prevNumber != (buttonNumbers[1] - 1) && !(prevNumber == safeSize && buttonNumbers[1] == 1))
+            else if (PrevNumber != (ButtonNumbers[1] - 1) && !(PrevNumber == SafeSize && ButtonNumbers[1] == 1))
             {
                 ResetButtons();
             }
@@ -95,17 +94,17 @@ namespace PocketSafe.ViewModels
                 InitializeButtons();
             }
 
-            prevNumber = buttonNumbers[1];
+            PrevNumber = ButtonNumbers[1];
         }
 
         [RelayCommand]
         private void R1C0_Click()
         {
-            if (!hasStarted)
+            if (!HasStarted)
             {
-                hasStarted = true;
+                HasStarted = true;
             }
-            else if (prevNumber != (buttonNumbers[2] - 1) && !(prevNumber == safeSize && buttonNumbers[2] == 1))
+            else if (PrevNumber != (ButtonNumbers[2] - 1) && !(PrevNumber == SafeSize && ButtonNumbers[2] == 1))
             {
                 ResetButtons();
             }
@@ -120,17 +119,17 @@ namespace PocketSafe.ViewModels
                 InitializeButtons();
             }
 
-            prevNumber = buttonNumbers[2];
+            PrevNumber = ButtonNumbers[2];
         }
 
         [RelayCommand]
         private void R1C1_Click()
         {
-            if (!hasStarted)
+            if (!HasStarted)
             {
-                hasStarted = true;
+                HasStarted = true;
             }
-            else if (prevNumber != (buttonNumbers[3] - 1) && !(prevNumber == safeSize && buttonNumbers[3] == 1))
+            else if (PrevNumber != (ButtonNumbers[3] - 1) && !(PrevNumber == SafeSize && ButtonNumbers[3] == 1))
             {
                 ResetButtons();
             }
@@ -145,7 +144,7 @@ namespace PocketSafe.ViewModels
                 InitializeButtons();
             }
 
-            prevNumber = buttonNumbers[3];
+            PrevNumber = ButtonNumbers[3];
         }
 
         #endregion

@@ -9,15 +9,17 @@ namespace PocketSafe.ViewModels
 {
     public abstract partial class BaseViewModel : ObservableObject
     {
-        protected bool hasStarted;
-        protected int[] buttonNumbers;
-        protected int prevNumber;
-        protected int safeSize;
+        protected abstract bool HasWon { get; }
+
+        protected bool HasStarted { get; set; }
+        protected int[] ButtonNumbers { get; set; }
+        protected int PrevNumber { get; set; }
+        protected int SafeSize { get; set; }
 
         public BaseViewModel()
         {
-            hasStarted = false;
-            prevNumber = 0;
+            HasStarted = false;
+            PrevNumber = 0;
         }
 
         [ObservableProperty]
@@ -28,9 +30,9 @@ namespace PocketSafe.ViewModels
             HashSet<int> generatedNumbers = new();
             Random random = new();
 
-            while (generatedNumbers.Count < safeSize)
+            while (generatedNumbers.Count < SafeSize)
             {
-                int randomNumber = random.Next(1, safeSize + 1);
+                int randomNumber = random.Next(1, SafeSize + 1);
 
                 if (!generatedNumbers.Contains(randomNumber))
                 {
@@ -38,8 +40,8 @@ namespace PocketSafe.ViewModels
                 }
             }
 
-            hasStarted = false;
-            buttonNumbers = generatedNumbers.ToArray();
+            HasStarted = false;
+            ButtonNumbers = generatedNumbers.ToArray();
         }
 
         protected abstract void ResetButtons();
