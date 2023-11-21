@@ -91,7 +91,7 @@ namespace PocketSafe.ViewModels
             if (HasWon)
             {
                 Shell.Current.CurrentPage.DisplayAlert("Unlocked!", 
-                    "You've unlocked the safe! Try hard difficulty next!", "Restart");
+                    "You've unlocked the safe! Go touch grass now!", "Restart");
 
                 ResetButtons();
                 InitializeButtons();
@@ -117,7 +117,7 @@ namespace PocketSafe.ViewModels
             if (HasWon)
             {
                 Shell.Current.CurrentPage.DisplayAlert("Unlocked!", 
-                    "You've unlocked the safe! Try hard difficulty next!", "Restart");
+                    "You've unlocked the safe! Go touch grass now!", "Restart");
 
                 ResetButtons();
                 InitializeButtons();
@@ -143,7 +143,7 @@ namespace PocketSafe.ViewModels
             if (HasWon)
             {
                 Shell.Current.CurrentPage.DisplayAlert("Unlocked!",
-                    "You've unlocked the safe! Try hard difficulty next!", "Restart");
+                    "You've unlocked the safe! Go touch grass now!", "Restart");
 
                 ResetButtons();
                 InitializeButtons();
@@ -169,7 +169,7 @@ namespace PocketSafe.ViewModels
             if (HasWon)
             {
                 Shell.Current.CurrentPage.DisplayAlert("Unlocked!", 
-                    "You've unlocked the safe! Try hard difficulty next!", "Restart");
+                    "You've unlocked the safe! Go touch grass now!", "Restart");
 
                 ResetButtons();
                 InitializeButtons();
@@ -195,7 +195,7 @@ namespace PocketSafe.ViewModels
             if (HasWon)
             {
                 Shell.Current.CurrentPage.DisplayAlert("Unlocked!", 
-                    "You've unlocked the safe! Try hard difficulty next!", "Restart");
+                    "You've unlocked the safe! Go touch grass now!", "Restart");
 
                 ResetButtons();
                 InitializeButtons();
@@ -221,7 +221,7 @@ namespace PocketSafe.ViewModels
             if (HasWon)
             {
                 Shell.Current.CurrentPage.DisplayAlert("Unlocked!",
-                    "You've unlocked the safe! Try hard difficulty next!", "Restart");
+                    "You've unlocked the safe! Go touch grass now!", "Restart");
 
                 ResetButtons();
                 InitializeButtons();
@@ -247,7 +247,7 @@ namespace PocketSafe.ViewModels
             if (HasWon)
             {
                 Shell.Current.CurrentPage.DisplayAlert("Unlocked!",
-                    "You've unlocked the safe! Try hard difficulty next!", "Restart");
+                    "You've unlocked the safe! Go touch grass now!", "Restart");
 
                 ResetButtons();
                 InitializeButtons();
@@ -273,7 +273,7 @@ namespace PocketSafe.ViewModels
             if (HasWon)
             {
                 Shell.Current.CurrentPage.DisplayAlert("Unlocked!",
-                    "You've unlocked the safe! Try hard difficulty next!", "Restart");
+                    "You've unlocked the safe! Go touch grass now!", "Restart");
 
                 ResetButtons();
                 InitializeButtons();
@@ -299,7 +299,7 @@ namespace PocketSafe.ViewModels
             if (HasWon)
             {
                 Shell.Current.CurrentPage.DisplayAlert("Unlocked!",
-                    "You've unlocked the safe! Try hard difficulty next!", "Restart");
+                    "You've unlocked the safe! Go touch grass now!", "Restart");
 
                 ResetButtons();
                 InitializeButtons();
@@ -325,7 +325,7 @@ namespace PocketSafe.ViewModels
             if (HasWon)
             {
                 Shell.Current.CurrentPage.DisplayAlert("Unlocked!",
-                    "You've unlocked the safe! Try hard difficulty next!", "Restart");
+                    "You've unlocked the safe! Go touch grass now!", "Restart");
 
                 ResetButtons();
                 InitializeButtons();
@@ -351,7 +351,7 @@ namespace PocketSafe.ViewModels
             if (HasWon)
             {
                 Shell.Current.CurrentPage.DisplayAlert("Unlocked!",
-                    "You've unlocked the safe! Try hard difficulty next!", "Restart");
+                    "You've unlocked the safe! Go touch grass now!", "Restart");
 
                 ResetButtons();
                 InitializeButtons();
@@ -377,7 +377,7 @@ namespace PocketSafe.ViewModels
             if (HasWon)
             {
                 Shell.Current.CurrentPage.DisplayAlert("Unlocked!",
-                    "You've unlocked the safe! Try hard difficulty next!", "Restart");
+                    "You've unlocked the safe! Go touch grass now!", "Restart");
 
                 ResetButtons();
                 InitializeButtons();
