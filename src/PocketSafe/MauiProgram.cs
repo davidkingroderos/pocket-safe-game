@@ -24,9 +24,11 @@ public static class MauiProgram
 #endif
 
         builder.Services.AddSingleton<EasyViewModel>();
+        builder.Services.AddSingleton<MediumViewModel>();
         builder.Services.AddSingleton<HardViewModel>();
 
         builder.Services.AddSingleton<EasyPage>();
+        builder.Services.AddSingleton<MediumPage>();
         builder.Services.AddSingleton<HardPage>();
 
         return builder.Build();

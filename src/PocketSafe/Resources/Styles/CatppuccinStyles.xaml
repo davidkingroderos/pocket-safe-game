@@ -11,7 +11,27 @@
     </Style>
 
     <Style ApplyToDerivedTypes="True" TargetType="ContentPage">
-        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LatteMantle}, Dark={StaticResource MacchiatoCrust}}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LatteCrust}, Dark={StaticResource MacchiatoCrust}}" />
+    </Style>
+
+    <Style ApplyToDerivedTypes="True" TargetType="Button">
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LatteBase}, Dark={StaticResource MacchiatoBase}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LatteGreen}, Dark={StaticResource MacchiatoGreen}}" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
     </Style>
 
     <Style ApplyToDerivedTypes="True" TargetType="Entry">
