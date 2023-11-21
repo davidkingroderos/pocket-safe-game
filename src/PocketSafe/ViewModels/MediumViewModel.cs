@@ -20,6 +20,7 @@ namespace PocketSafe.ViewModels
                 else return false;
             }
         }
+
         public MediumViewModel()
         {
             Title = "Medium";
