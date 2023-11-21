@@ -7,15 +7,27 @@ using System.Threading.Tasks;
 
 namespace PocketSafe.ViewModels
 {
-    public partial class BaseViewModel : ObservableObject
+    public abstract partial class BaseViewModel : ObservableObject
     {
+        protected bool hasStarted;
+        protected int[] buttonNumbers;
+        protected int prevNumber = 0; 
+        protected int safeSize;
+
+        public BaseViewModel()
+        {
+            hasStarted = false;
+
+            InitializeButtons();
+        }
+
         [ObservableProperty]
         public string title;
 
         [ObservableProperty]
-        [NotifyPropertyChangedFor(nameof(IsNotBusy))]
         public bool isBusy;
 
-        public bool IsNotBusy => !IsBusy;
+        protected abstract void ResetButtons();
+        protected abstract void InitializeButtons();
     }
 }

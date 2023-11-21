@@ -10,10 +10,6 @@ namespace PocketSafe.ViewModels
 {
     public partial class EasyViewModel : BaseViewModel
     {
-        private bool hasStarted = false;
-        private int[] buttonNumbers;
-        private int prevNumber = 0;
-        private readonly int safeSize = 4;
 
         private bool HasWon
         {
@@ -25,21 +21,11 @@ namespace PocketSafe.ViewModels
             }
         }
 
-        public EasyViewModel()
+        public EasyViewModel() : base()
         {
             Title = "Easy";
-
-            InitializeButtons();
+            safeSize = 4;
         }
-
-        [ObservableProperty]
-        private string r0C0_Color;
-        [ObservableProperty]
-        private string r0C1_Color;
-        [ObservableProperty]
-        private string r1C0_Color;
-        [ObservableProperty]
-        private string r1C1_Color;
 
         [ObservableProperty]
         private bool r0C0_IsClickable = true;
@@ -65,7 +51,6 @@ namespace PocketSafe.ViewModels
                 hasStarted = true;
             }
             else if (prevNumber != (buttonNumbers[0] - 1) && !(prevNumber == safeSize && buttonNumbers[0] == 1))
-            //else if (prevNumber != (buttonNumbers[0] - 1) && prevNumber != safeSize && buttonNumbers[0] != 1)
             {
                 ResetButtons();
             }
@@ -100,7 +85,6 @@ namespace PocketSafe.ViewModels
                 hasStarted = true;
             }
             else if (prevNumber != (buttonNumbers[1] - 1) && !(prevNumber == safeSize && buttonNumbers[1] == 1))
-            //else if (prevNumber != (buttonNumbers[1] - 1) && prevNumber != safeSize && buttonNumbers[1] != 1)
             {
                 ResetButtons();
             }
@@ -135,7 +119,6 @@ namespace PocketSafe.ViewModels
                 hasStarted = true;
             }
             else if (prevNumber != (buttonNumbers[2] - 1) && !(prevNumber == safeSize && buttonNumbers[2] == 1))
-            //else if (prevNumber != (buttonNumbers[2] - 1) && prevNumber != safeSize && buttonNumbers[2] != 1)
             {
                 ResetButtons();
             }
@@ -169,7 +152,6 @@ namespace PocketSafe.ViewModels
                 hasStarted = true;
             }
             else if (prevNumber != (buttonNumbers[3] - 1) && !(prevNumber == safeSize && buttonNumbers[3] == 1))
-            //else if (prevNumber != (buttonNumbers[3] - 1) && prevNumber != safeSize && buttonNumbers[3] != 1)
             {
                 ResetButtons();
             }
@@ -189,7 +171,7 @@ namespace PocketSafe.ViewModels
             IsBusy = false;
         }
 
-        private void ResetButtons()
+        protected override void ResetButtons()
         {
             R0C0_IsClickable = true;
             R0C1_IsClickable = true;
@@ -197,7 +179,7 @@ namespace PocketSafe.ViewModels
             R1C1_IsClickable = true;
         }
 
-        private void InitializeButtons()
+        protected override void InitializeButtons()
         {
             HashSet<int> generatedNumbers = new();
             Random random = new();

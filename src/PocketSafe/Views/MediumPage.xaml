@@ -20,57 +20,41 @@
             Grid.Row="0"
             Grid.Column="0"
             Margin="10"
-            BackgroundColor="{AppThemeBinding Light={StaticResource LatteGreen},
-                                              Dark={StaticResource MacchiatoGreen}}"
             CornerRadius="20" />
         <Button
             Grid.Row="0"
             Grid.Column="1"
             Margin="10"
-            BackgroundColor="{AppThemeBinding Light={StaticResource LatteGreen},
-                                              Dark={StaticResource MacchiatoGreen}}"
             CornerRadius="20" />
         <Button
             Grid.Row="1"
             Grid.Column="0"
             Margin="10"
-            BackgroundColor="{AppThemeBinding Light={StaticResource LatteGreen},
-                                              Dark={StaticResource MacchiatoGreen}}"
             CornerRadius="20" />
         <Button
             Grid.Row="1"
             Grid.Column="1"
             Margin="10"
-            BackgroundColor="{AppThemeBinding Light={StaticResource LatteGreen},
-                                              Dark={StaticResource MacchiatoGreen}}"
             CornerRadius="20" />
         <Button
             Grid.Row="2"
             Grid.Column="0"
             Margin="10"
-            BackgroundColor="{AppThemeBinding Light={StaticResource LatteGreen},
-                                              Dark={StaticResource MacchiatoGreen}}"
             CornerRadius="20" />
         <Button
             Grid.Row="2"
             Grid.Column="1"
             Margin="10"
-            BackgroundColor="{AppThemeBinding Light={StaticResource LatteGreen},
-                                              Dark={StaticResource MacchiatoGreen}}"
             CornerRadius="20" />
         <Button
             Grid.Row="3"
             Grid.Column="0"
             Margin="10"
-            BackgroundColor="{AppThemeBinding Light={StaticResource LatteGreen},
-                                              Dark={StaticResource MacchiatoGreen}}"
             CornerRadius="20" />
         <Button
             Grid.Row="3"
             Grid.Column="1"
             Margin="10"
-            BackgroundColor="{AppThemeBinding Light={StaticResource LatteGreen},
-                                              Dark={StaticResource MacchiatoGreen}}"
             CornerRadius="20" />
     </Grid>
 
